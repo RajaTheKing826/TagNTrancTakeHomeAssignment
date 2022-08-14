@@ -1,0 +1,19 @@
+{
+  "headings": {
+    "welcomeToCustomerShipments": "కస్టమర్ సరుకులకు స్వాగతం",
+    "yourShipmentDetails": "మీ షిప్‌మెంట్ వివరాలు",
+    "itemsCount": "వస్తువుల గణనలు : "
+  },
+  "subHeadings": {
+    "size": "పరిమాణం",
+    "expectedDeliveryDate": "ఊహించిన డెలివరీ తేదీ",
+    "sourceLocation": "ప్రారంభ స్థానం",
+    "destinationLocation": "గమ్యస్థానం"
+  },
+  "buttonTexts": {
+    "logout": "లాగ్అవుట్"
+  },
+  "imageAltTexts": {
+    "shipmentTravelImage": "ఇది షిప్‌మెంట్ సంబంధిత చిత్రం"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "headings": {
+    "welcomeToCustomerShipments": "राहक शिपमेंट में आपका स्वागत है",
+    "yourShipmentDetails": "आपका शिपमेंट विवरण",
+    "itemsCount": "आइटम गिनती : "
+  },
+  "subHeadings": {
+    "size": "आकार",
+    "expectedDeliveryDate": "अपेक्षित वितरण की तारीख",
+    "sourceLocation": "अपेक्षित वितरण की तारीख",
+    "destinationLocation": "गंतव्य स्थान"
+  },
+  "buttonTexts": {
+    "logout": "लॉग आउट"
+  },
+  "imageAltTexts": {
+    "shipmentTravelImage": "यह शिपमेंट से संबंधित छवि है"
+  }
+}

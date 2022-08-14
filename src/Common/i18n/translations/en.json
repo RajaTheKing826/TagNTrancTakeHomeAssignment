@@ -1,0 +1,19 @@
+{
+  "headings": {
+    "welcomeToCustomerShipments": "Welcome to Customer shipments",
+    "yourShipmentDetails": "Your shipments Details",
+    "itemsCount": "Items Count : "
+  },
+  "subHeadings": {
+    "size": "Size : ",
+    "expectedDeliveryDate": "Expected Delivery Date : ",
+    "sourceLocation": "Starting Location : ",
+    "destinationLocation": "Destination Location : "
+  },
+  "buttonTexts": {
+    "logout": "Logout"
+  },
+  "imageAltTexts": {
+    "shipmentTravelImage": "This is Shipment related image"
+  }
+}

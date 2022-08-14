@@ -1,2 +1,2 @@
-import { CustomerShipmentsRoute } from './CustomerShipmentsRoute'
-export default CustomerShipmentsRoute
+import { CustomerShipmentsRoute } from "./CustomerShipmentsRoute";
+export default CustomerShipmentsRoute;

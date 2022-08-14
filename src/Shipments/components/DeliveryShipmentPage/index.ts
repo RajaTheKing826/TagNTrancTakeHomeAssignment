@@ -1,2 +1,2 @@
-import { DeliveryShipmentPage } from './DeliveryShipmentPage'
-export default DeliveryShipmentPage
+import { DeliveryShipmentPage } from "./DeliveryShipmentPage";
+export default DeliveryShipmentPage;

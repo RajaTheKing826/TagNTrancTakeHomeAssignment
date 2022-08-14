@@ -1,10 +1,8 @@
-
-import CommonRoutes from "./Common/routes"
+import CommonRoutes from "./Common/routes";
+import "./App.css";
 
 function App() {
-  return (
-        <CommonRoutes/>
-  );
+  return <CommonRoutes />;
 }
 
 export default App;
