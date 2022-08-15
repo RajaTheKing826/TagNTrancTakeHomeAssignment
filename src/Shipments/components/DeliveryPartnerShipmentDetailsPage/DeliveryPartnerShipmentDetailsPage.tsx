@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Rings } from "react-loader-spinner";
+import { Oval } from "react-loader-spinner";
 
 import HeaderWrapper from "../../../Common/components/HeaderWrapper";
 import { DeliveryPartnerShipmentsMachineState } from "../../machines/DeliveryPartnerShipmentsMachine/DeliveryPartnerShipmentsMachine";
@@ -10,17 +10,41 @@ import {
   PAGE_LOADING,
 } from "../../machines/DeliveryPartnerShipmentsMachine/constants";
 import DeliveryPartnerShipmentItemsListComponent from "../DeliveryPartnerShipmentItemsListComponent";
+import {
+  deliverPickedStatusOption,
+  deliveryDateSortOptions,
+} from "../../constants/shipmentFilterOptionConstants";
 
-import { PageContainer, LoadingPageContainer } from "./styledComponents";
+import {
+  PageContainer,
+  LoadingPageContainer,
+  FiltersBar,
+  FilterAndSortSelectsWrapper,
+  SotyByDateSelectContainer,
+  FilterByDeliveryStatusSelectContainer,
+  SelectLabelText,
+} from "./styledComponents";
+import CommonSelectorComponent from "../../../Common/components/CommonSelectorComponent";
+import { SelectOption } from "../../../Common/components/CommonSelectorComponent/CommonSelectorComponent";
 
 interface DeliveryPartnerShipmentPageProps {
   deliveryPartnerShipmentsMachineState: DeliveryPartnerShipmentsMachineState;
+  setSelectedFilter: (value: SelectOption | null) => void;
+  setSelectedSort: (value: SelectOption | null) => void;
+  defaultFilterValue: SelectOption;
+  defaultSortValue: SelectOption;
 }
 
 export const DeliveryPartnerShipmentDetailsPage = (
   props: DeliveryPartnerShipmentPageProps
 ) => {
-  const { deliveryPartnerShipmentsMachineState } = props;
+  const {
+    deliveryPartnerShipmentsMachineState,
+    setSelectedSort,
+    setSelectedFilter,
+    defaultFilterValue,
+    defaultSortValue,
+  } = props;
   const { t } = useTranslation();
 
   const shouldShowLoader =
@@ -29,10 +53,18 @@ export const DeliveryPartnerShipmentDetailsPage = (
   const shouldShowFailureView =
     deliveryPartnerShipmentsMachineState.hasTag(PAGE_FAILURE_VIEW);
 
+  const onChangeSort = (option: SelectOption | null) => {
+    setSelectedSort(option);
+  };
+
+  const onChangeFilter = (option: SelectOption | null) => {
+    setSelectedFilter(option);
+  };
+
   const renderLoader = () => {
     return (
       <LoadingPageContainer>
-        <Rings
+        <Oval
           height="80"
           width="80"
           color="green"
@@ -50,6 +82,30 @@ export const DeliveryPartnerShipmentDetailsPage = (
             deliveryPartnerShipmentsMachineState.context.shipments.length
           }
         />
+        <FiltersBar>
+          <FilterAndSortSelectsWrapper>
+            <SotyByDateSelectContainer>
+              <SelectLabelText>
+                {t("subHeadings.sortByDeliveryDate")}
+              </SelectLabelText>
+              <CommonSelectorComponent
+                selectOptions={deliveryDateSortOptions}
+                onOptionChange={onChangeSort}
+                defaultValue={defaultSortValue}
+              />
+            </SotyByDateSelectContainer>
+            <FilterByDeliveryStatusSelectContainer>
+              <SelectLabelText>
+                {t("subHeadings.filterByDeliveryStatus")}
+              </SelectLabelText>
+              <CommonSelectorComponent
+                selectOptions={deliverPickedStatusOption}
+                onOptionChange={onChangeFilter}
+                defaultValue={defaultFilterValue}
+              />
+            </FilterByDeliveryStatusSelectContainer>
+          </FilterAndSortSelectsWrapper>
+        </FiltersBar>
         <DeliveryPartnerShipmentItemsListComponent
           deliveryPartnerShipmentsMachineState={
             deliveryPartnerShipmentsMachineState

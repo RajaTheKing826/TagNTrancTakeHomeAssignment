@@ -8,6 +8,7 @@ class DeliveryParnterShipmentDataModel {
   destination: string;
   id: string;
   title: string;
+  deliveryStatus: string;
   constructor(deliveryPartnerShipmentItem: DeliveryPartnerShipmentItem) {
     this.id = deliveryPartnerShipmentItem.id;
     this.destination = deliveryPartnerShipmentItem.destination;
@@ -17,6 +18,7 @@ class DeliveryParnterShipmentDataModel {
     this.size = deliveryPartnerShipmentItem.size;
     this.image = deliveryPartnerShipmentItem.image;
     this.title = deliveryPartnerShipmentItem.title;
+    this.deliveryStatus = deliveryPartnerShipmentItem.delivery_status;
   }
 }
 

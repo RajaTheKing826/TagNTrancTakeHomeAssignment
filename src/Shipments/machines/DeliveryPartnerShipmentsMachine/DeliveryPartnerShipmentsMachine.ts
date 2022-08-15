@@ -15,7 +15,7 @@ const {
   getShipmentDetailsSuccessState,
 } = deliveryPartnerShipmentMachineStates;
 
-const { onGetShipmentDetailsEvent, onRetryEvent } =
+const { onGetShipmentDetailsEvent, onRetryEvent, onSortOrFilterShipments } =
   deliveryPartnerShipmentMachineEvents;
 
 const { pageLoading } = deliveryPartnerShipmentMachineTags;
@@ -28,7 +28,8 @@ export interface DeliveryPartnerShipmentMachineContext {
 export type DeliveryPartnerShipmentsMachineEvents =
   | { type: "ON_GET_SHIPMENT_DETAILS_EVENT"; data: any }
   | { type: "ON_GET_DELIVERY_PARTNERS_EVENT" }
-  | { type: "ON_RETRY_EVENT" };
+  | { type: "ON_RETRY_EVENT" }
+  | { type: "ON_SORT_OR_FILTER_SHIPMENT"; data: any };
 
 export const deliveryParnterShipmentsMachine = () => {
   return createMachine<
@@ -61,7 +62,9 @@ export const deliveryParnterShipmentsMachine = () => {
         },
       },
       [getShipmentDetailsSuccessState]: {
-        type: "final",
+        on: {
+          [onGetShipmentDetailsEvent]: getShipmentDetailsState,
+        },
       },
       [getShipmentDetailsFailureState]: {
         on: {

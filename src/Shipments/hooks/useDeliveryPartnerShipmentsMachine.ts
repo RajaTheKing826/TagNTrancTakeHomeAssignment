@@ -24,8 +24,8 @@ const useDeliveryPartnerShipmentsMachine = () => {
         },
       },
       services: {
-        getDeliveryPartnerShipmentDetails: () =>
-          getDeliveryPartnerShipmentDetailsApi({}),
+        getDeliveryPartnerShipmentDetails: (context, event: any) =>
+          getDeliveryPartnerShipmentDetailsApi(event.data ? event.data : {}),
       },
       guards: {},
     });

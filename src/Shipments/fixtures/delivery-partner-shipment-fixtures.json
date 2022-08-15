@@ -6,7 +6,8 @@
     "source_location": "Eluru",
     "destination": "Hyderabad",
     "id": "842e3cc4-94a6-433a-8d77-aa17c6a8642f",
-    "title": "Deliverable Item 1"
+    "title": "Deliverable Item 1",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Mediq_Sverige_Kungsbacka_warehouse.jpg",
@@ -15,7 +16,8 @@
     "source_location": "Amalapuram",
     "destination": "Banglore",
     "id": "35bfd388-34a8-497f-9dc4-30a0566f87df",
-    "title": "Deliverable Item 2"
+    "title": "Deliverable Item 2",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Mediq_Sverige_Kungsbacka_warehouse.jpg",
@@ -24,7 +26,8 @@
     "source_location": "Nellore",
     "destination": "Hyderabad",
     "id": "87f1e026-3337-4e5e-8d6e-acde23885aba",
-    "title": "Deliverable Item 3"
+    "title": "Deliverable Item 3",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://static8.depositphotos.com/1000128/947/i/600/depositphotos_9476258-stock-photo-storage-warehouse-with-packaged-goods.jpg",
@@ -33,7 +36,8 @@
     "source_location": "Vizag",
     "destination": "Banglore",
     "id": "aa1321da-517a-4c53-97ac-876d7ab8a0e6",
-    "title": "Deliverable Item 4"
+    "title": "Deliverable Item 4",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://static5.depositphotos.com/1000128/468/i/600/depositphotos_4680685-stock-photo-cardboard-boxes-on-pallet.jpg",
@@ -42,7 +46,8 @@
     "source_location": "Vizag",
     "destination": "Banglore",
     "id": "be08e56e-491a-4ed8-8678-5496490a08a9",
-    "title": "Deliverable Item 5"
+    "title": "Deliverable Item 5",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://st2.depositphotos.com/1579454/10056/i/600/depositphotos_100561420-stock-photo-cardboard-boxes-package-parcels.jpg",
@@ -51,7 +56,8 @@
     "source_location": "Nellore",
     "destination": "Hyderabad",
     "id": "864d4ffc-228b-4280-a2bf-b9f32e09d841",
-    "title": "Deliverable Item 6"
+    "title": "Deliverable Item 6",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://static8.depositphotos.com/1000128/947/i/950/depositphotos_9476258-stock-photo-storage-warehouse-with-packaged-goods.jpg",
@@ -60,7 +66,8 @@
     "source_location": "Kadapa",
     "destination": "Banglore",
     "id": "8a9838e3-0331-4d6e-89db-44d6f0b16e9d",
-    "title": "Deliverable Item 7"
+    "title": "Deliverable Item 7",
+    "delivery_status": "PICKED"
   },
   {
     "image": "https://st.depositphotos.com/1037987/3683/i/600/depositphotos_36835861-stock-photo-goods-on-conveyor-belt-in.jpg",
@@ -69,7 +76,8 @@
     "source_location": "Kadapa",
     "destination": "Banglore",
     "id": "a7418f31-5072-42f6-a12d-a217ee09ef44",
-    "title": "Deliverable Item 8"
+    "title": "Deliverable Item 8",
+    "delivery_status": "PICKED"
   },
   {
     "image": "https://st.depositphotos.com/2014059/4065/i/600/depositphotos_40657709-stock-photo-cardboard-boxes-on-a-pallet.jpg",
@@ -78,7 +86,8 @@
     "source_location": "Kurnool",
     "destination": "Mumbai",
     "id": "55c495cd-2c4f-4a55-9c37-6a82ead58717",
-    "title": "Deliverable Item 9"
+    "title": "Deliverable Item 9",
+    "delivery_status": "PICKED"
   },
   {
     "image": "https://thumbs.dreamstime.com/b/stack-cartons-stacked-brown-delivery-carton-boxes-white-background-34571603.jpg",
@@ -87,7 +96,8 @@
     "source_location": "Kurnool",
     "destination": "Mumbai",
     "id": "7419fbce-68f6-4710-9061-8882d48b6482",
-    "title": "Deliverable Item 10"
+    "title": "Deliverable Item 10",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://thumbs.dreamstime.com/b/stack-cartons-stacked-brown-delivery-carton-boxes-white-background-34888479.jpg",
@@ -96,7 +106,8 @@
     "source_location": "Nellore",
     "destination": "Mumbai",
     "id": "33d73ad7-4d43-489b-93c9-b8aef139443c",
-    "title": "Deliverable Item 11"
+    "title": "Deliverable Item 11",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "http://www.clipartbest.com/cliparts/jcx/Lzd/jcxLzdqgi.jpg",
@@ -105,7 +116,8 @@
     "source_location": "Chittooru",
     "destination": "Hyderabad",
     "id": "0354ae87-b6b0-4634-960f-ef46d971fbbc",
-    "title": "Deliverable Item 12"
+    "title": "Deliverable Item 12",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "http://renewpackaging.com/wp-content/uploads/2016/06/Stock-Package-Boxes-Company.jpg",
@@ -114,7 +126,8 @@
     "source_location": "Chittooru",
     "destination": "Mumbai",
     "id": "80275b53-8eb2-4e4f-88bf-18ef8e57f402",
-    "title": "Deliverable Item 13"
+    "title": "Deliverable Item 13",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "http://renewpackaging.com/wp-content/uploads/2016/06/Stock-Package-Boxes-Company.jpg",
@@ -123,7 +136,8 @@
     "source_location": "Rayachoti",
     "destination": "Hyderabad",
     "id": "08df74ec-1d1c-4371-bb72-38d553f59f51",
-    "title": "Deliverable Item 14"
+    "title": "Deliverable Item 14",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://www.futurepack.co.za/wp-content/uploads/cached_1280x0_Stock-2-DWB.jpg",
@@ -132,7 +146,8 @@
     "source_location": "Kavali",
     "destination": "Mumbai",
     "id": "9ddb018a-8a89-4506-b376-5129ecefe850",
-    "title": "Deliverable Item 15"
+    "title": "Deliverable Item 15",
+    "delivery_status": "PICKED"
   },
   {
     "image": "https://www.kpak.co.za/wp-content/uploads/2019/10/All-Stock-Box-Assembled-Random-3-@MB.png",
@@ -141,7 +156,8 @@
     "source_location": "Kavali",
     "destination": "Mumbai",
     "id": "5ce96f7d-ea56-4e15-9cd3-0290cbd1bd96",
-    "title": "Deliverable Item 16"
+    "title": "Deliverable Item 16",
+    "delivery_status": "PICKED"
   },
   {
     "image": "https://www.ql-solutions.uk/uploads/4/0/3/9/40398919/overrun-boxes_3_orig.jpg",
@@ -150,7 +166,8 @@
     "source_location": "Amalapuram",
     "destination": "Hyderabad",
     "id": "d0f74baa-8493-48c7-9541-2bfc4cc47e06",
-    "title": "Deliverable Item 17"
+    "title": "Deliverable Item 17",
+    "delivery_status": "PICKED"
   },
 
   {
@@ -160,7 +177,8 @@
     "source_location": "Amalapuram",
     "destination": "Hyderabad",
     "id": "c062b634-6b06-4273-bfd7-38351979838a",
-    "title": "Deliverable Item 18"
+    "title": "Deliverable Item 18",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://www.whitbychamber.org/wp-content/uploads/boxes.jpg",
@@ -169,7 +187,8 @@
     "source_location": "Vizag",
     "destination": "Mumbai",
     "id": "32253f1b-3fc7-4c8c-8700-0c572c4ccfa3",
-    "title": "Deliverable Item 19"
+    "title": "Deliverable Item 19",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://m.media-amazon.com/images/I/81JJd+hatiL._SY450_.jpg",
@@ -178,7 +197,8 @@
     "source_location": "Vizag",
     "destination": "Hyderabad",
     "id": "e12d5729-142e-42b5-ba57-1a0ab868c976",
-    "title": "Deliverable Item 20"
+    "title": "Deliverable Item 20",
+    "delivery_status": "PICKED"
   },
   {
     "image": "https://m.media-amazon.com/images/I/81XjqAcunjL._AC_SY355_.jpg",
@@ -187,7 +207,8 @@
     "source_location": "Kadapa",
     "destination": "Hyderabad",
     "id": "676521a7-c7e3-4bf4-8398-68e599835191",
-    "title": "Deliverable Item 21"
+    "title": "Deliverable Item 21",
+    "delivery_status": "PICKED"
   },
   {
     "image": "https://www.auspods.com.au/wp-content/uploads/2015/06/box-bundle-10pack-1000x1000.jpg",
@@ -196,7 +217,8 @@
     "source_location": "Kadapa",
     "destination": "Hyderabad",
     "id": "4e5f6f80-f2e9-411f-be20-d1be439c1d32",
-    "title": "Deliverable Item 22"
+    "title": "Deliverable Item 22",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://www.kpak.co.za/wp-content/uploads/2019/10/All-Stock-Box-Assembled-Random-3-@MB.png",
@@ -205,7 +227,8 @@
     "source_location": "Kurnool",
     "destination": "Mumbai",
     "id": "e8938ae5-30df-4221-ae72-89641329c15a",
-    "title": "Deliverable Item 23"
+    "title": "Deliverable Item 23",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://www.kpak.co.za/wp-content/uploads/2019/10/All-Stock-Box-Assembled-Random-3-@MB.png",
@@ -214,7 +237,8 @@
     "source_location": "Kurnool",
     "destination": "Mumbai",
     "id": "1a629b6a-24aa-4aec-8e68-f7e4bb8019ee",
-    "title": "Deliverable Item 24"
+    "title": "Deliverable Item 24",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "https://www.orbitsports.co.za/wp-content/uploads/2020/08/stock_boxes.jpg",
@@ -223,7 +247,8 @@
     "source_location": "Vizag",
     "destination": "Mumbai",
     "id": "ec7a8112-13dc-47ab-98ec-1f8ad3483dbf",
-    "title": "Deliverable Item 25"
+    "title": "Deliverable Item 25",
+    "delivery_status": "ASSIGNED"
   },
   {
     "image": "http://renewpackaging.com/wp-content/uploads/2016/06/Stock-Package-Boxes-Company.jpg",
@@ -232,7 +257,8 @@
     "source_location": "Vizag",
     "destination": "Banglore",
     "id": "d96e9f89-ea19-420e-b96b-07ffa0132b70",
-    "title": "Deliverable Item 26"
+    "title": "Deliverable Item 26",
+    "delivery_status": "DELIVERED"
   },
   {
     "image": "https://thumbs.dreamstime.com/b/stack-cartons-stacked-brown-delivery-carton-boxes-white-background-34571603.jpg",
@@ -241,7 +267,8 @@
     "source_location": "Nellore",
     "destination": "Mumbai",
     "id": "8e28fa40-2fb1-4710-97d9-bef381cf6913",
-    "title": "Deliverable Item 27"
+    "title": "Deliverable Item 27",
+    "delivery_status": "DELIVERED"
   },
   {
     "image": "https://st.depositphotos.com/2014059/4065/i/600/depositphotos_40657709-stock-photo-cardboard-boxes-on-a-pallet.jpg",
@@ -250,7 +277,8 @@
     "source_location": "Rayachoti",
     "destination": "Banglore",
     "id": "5edcfdbb-a4e5-445e-9002-4e55963da5f7",
-    "title": "Deliverable Item 28"
+    "title": "Deliverable Item 28",
+    "delivery_status": "DELIVERED"
   },
   {
     "image": "https://www.orbitsports.co.za/wp-content/uploads/2020/08/stock_boxes.jpg",
@@ -259,7 +287,8 @@
     "source_location": "Rayachoti",
     "destination": "Banglore",
     "id": "0816cc7f-44c1-4156-9dff-cbbde1f7775f",
-    "title": "Deliverable Item 29"
+    "title": "Deliverable Item 29",
+    "delivery_status": "DELIVERED"
   },
   {
     "image": "https://www.ql-solutions.uk/uploads/4/0/3/9/40398919/overrun-boxes_3_orig.jpg",
@@ -268,7 +297,8 @@
     "source_location": "Eluru",
     "destination": "Hyderabad",
     "id": "e803f4ab-5c86-40c1-ac77-b7f38f3f186e",
-    "title": "Deliverable Item 30"
+    "title": "Deliverable Item 30",
+    "delivery_status": "DELIVERED"
   },
   {
     "image": "https://www.whitbychamber.org/wp-content/uploads/boxes.jpg",
@@ -277,7 +307,8 @@
     "source_location": "Eluru",
     "destination": "Hyderabad",
     "id": "2a9f91e7-5261-4e3d-a9ce-15def71a4672",
-    "title": "Deliverable Item 31"
+    "title": "Deliverable Item 31",
+    "delivery_status": "DELIVERED"
   },
   {
     "image": "https://thumbs.dreamstime.com/b/stack-cartons-stacked-brown-delivery-carton-boxes-white-background-34571603.jpg",
@@ -286,7 +317,8 @@
     "source_location": "Gowlidoddy",
     "destination": "Banglore",
     "id": "dd3773d9-a924-4ac4-b3fb-ee7ea967b9ca",
-    "title": "Deliverable Item 31"
+    "title": "Deliverable Item 32",
+    "delivery_status": "DELIVERED"
   },
   {
     "image": "https://thumbs.dreamstime.com/b/stack-cartons-stacked-brown-delivery-carton-boxes-white-background-34571603.jpg",
@@ -295,6 +327,7 @@
     "source_location": "Gowlidoddy",
     "destination": "Banglore",
     "id": "71146116-cba9-462f-a76c-2dc8a52cb96e",
-    "title": "Deliverable Item 32"
+    "title": "Deliverable Item 33",
+    "delivery_status": "DELIVERED"
   }
 ]

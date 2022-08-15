@@ -1,10 +1,12 @@
 import {
   CustomerShipmentAPIRepsonse,
   CustomerShipmentItem,
+  DeliveryPartnerShipmentItem,
   GetCustomerShipmentsRequestObject,
+  GetDeliveryPartnerShipmentsRequestObject,
 } from "../services/types";
 
-export const getFilteredShipmentsResponse = (
+export const getCustomerFilteredShipmentsResponse = (
   requestObject: GetCustomerShipmentsRequestObject,
   shipments: Array<CustomerShipmentItem>
 ): CustomerShipmentAPIRepsonse => {
@@ -28,4 +30,61 @@ export const getFilteredShipmentsResponse = (
   return {
     shipments: filteredShipments,
   };
+};
+
+function descendingSortFunction(
+  firstObject: DeliveryPartnerShipmentItem,
+  secondObject: DeliveryPartnerShipmentItem
+) {
+  if (
+    firstObject.expected_delivery_date < secondObject.expected_delivery_date
+  ) {
+    return -1;
+  }
+  if (
+    firstObject.expected_delivery_date > secondObject.expected_delivery_date
+  ) {
+    return 1;
+  }
+  return 0;
+}
+
+function ascendingSortFunction(
+  firstObject: DeliveryPartnerShipmentItem,
+  secondObject: DeliveryPartnerShipmentItem
+) {
+  if (
+    firstObject.expected_delivery_date > secondObject.expected_delivery_date
+  ) {
+    return -1;
+  }
+  if (
+    firstObject.expected_delivery_date < secondObject.expected_delivery_date
+  ) {
+    return 1;
+  }
+  return 0;
+}
+
+export const getFilteredAndSortedDeliveryPartnerShipments = (
+  requestObject: GetDeliveryPartnerShipmentsRequestObject,
+  shipments: Array<DeliveryPartnerShipmentItem>
+) => {
+  const { filter, sort } = requestObject;
+  let filteredItems = shipments;
+
+  console.log(filter, sort, "filter,sort");
+  if (sort && sort !== "") {
+    if (sort === "HOGH_TO_LOW") {
+      filteredItems.sort(descendingSortFunction);
+    } else {
+      filteredItems.sort(ascendingSortFunction);
+    }
+  }
+  if (filter && filter !== "") {
+    filteredItems = filteredItems.filter(
+      (item) => item.delivery_status === filter
+    );
+  }
+  return { shipments: filteredItems };
 };

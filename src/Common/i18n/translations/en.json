@@ -10,7 +10,9 @@
     "sourceLocation": "Starting Location : ",
     "destinationLocation": "Destination Location : ",
     "customerShipmentDetails": "Customer Shipment Details",
-    "deliveryPartnerShipmentDetails": "Delivery Partner Shipment Details"
+    "deliveryPartnerShipmentDetails": "Delivery Partner Shipment Details",
+    "sortByDeliveryDate": "Sort By Delivery Date",
+    "filterByDeliveryStatus": "Filter By Delivery Status"
   },
   "buttonTexts": {
     "logout": "Logout"

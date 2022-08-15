@@ -14,6 +14,8 @@ export const ON_GET_SHIPMENT_DETAILS_EVENT = "onGetShipmentDetailsEvent";
 export const ON_GET_DELIVERY_PARTNERS_EVENT = "onGetDeliveryPartnersEvent";
 export const ON_RETRY_EVENT = "onRetryEvent";
 
+export const ON_SORT_OR_FILTER_SHIPMENT = "onSortOrFilterShipments";
+
 export const PAGE_LOADING = "PAGE_LOADING";
 export const BUTTON_LOADING = "BUTTON_LOADING";
 export const PAGE_FAILURE_VIEW = "PAGE_FAILURE_VIEW";
@@ -32,6 +34,7 @@ export const deliveryPartnerShipmentMachineEvents = {
   onGetShipmentDetailsEvent: ON_GET_SHIPMENT_DETAILS_EVENT,
   onGetDeliveryPartnerEvent: ON_GET_DELIVERY_PARTNERS_EVENT,
   onRetryEvent: ON_RETRY_EVENT,
+  onSortOrFilterShipments: ON_SORT_OR_FILTER_SHIPMENT,
 };
 
 export const deliveryPartnerShipmentMachineTags = {

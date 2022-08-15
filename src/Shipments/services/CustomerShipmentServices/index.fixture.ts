@@ -1,8 +1,11 @@
 import React from "react";
 import { resolveWithTimeout } from "../../../Common/utils/promiseUtils";
-import { getFilteredShipmentsResponse } from "../../utils/requestObjectUtils";
+import {
+  getCustomerFilteredShipmentsResponse,
+  getFilteredAndSortedDeliveryPartnerShipments,
+} from "../../utils/requestObjectUtils";
 import customerShipmentFixtureResponse from "../../fixtures/customer-shipment-fixtures.json";
-import deliveryPartnerShipmentFixturesResponse from "../../fixtures/delivery-partner-shipment-fixtures copy.json";
+import deliveryPartnerShipmentFixturesResponse from "../../fixtures/delivery-partner-shipment-fixtures.json";
 import {
   GetCustomerShipmentsRequestObject,
   GetDeliveryPartnerShipmentsRequestObject,
@@ -13,7 +16,7 @@ export class ShipmentFixtureService implements ShipmentService {
   getCustomerShipmentDetails = (
     requestObject: GetCustomerShipmentsRequestObject
   ) => {
-    const filteredResponse = getFilteredShipmentsResponse(
+    const filteredResponse = getCustomerFilteredShipmentsResponse(
       requestObject,
       customerShipmentFixtureResponse
     );
@@ -23,7 +26,7 @@ export class ShipmentFixtureService implements ShipmentService {
   getDeliveryPartnerShipmentDetails = (
     requestObject: GetDeliveryPartnerShipmentsRequestObject
   ) => {
-    const filteredResponse = getFilteredShipmentsResponse(
+    const filteredResponse = getFilteredAndSortedDeliveryPartnerShipments(
       requestObject,
       deliveryPartnerShipmentFixturesResponse
     );

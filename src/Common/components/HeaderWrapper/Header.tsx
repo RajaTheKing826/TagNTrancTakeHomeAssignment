@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
 import { TAG_N_TRAC_LOGO } from "../../constants/ImageUrlConstants";
 import { languageSelectorOptions } from "../../constants/LanguageConstants";
-import LanguageSelector from "../LanguageSelector";
-import { LanguageOption } from "../LanguageSelector/LanguageSelector";
+import CommonSelector from "../CommonSelectorComponent";
+import { SelectOption } from "../CommonSelectorComponent/CommonSelectorComponent";
 
 import {
   HeaderContainer,
@@ -30,7 +30,7 @@ export const Header = (props: HeaderComponentsProps) => {
 
   const onLogoutButtonClick = () => {};
 
-  const onLanguageChange = (selectedOption: LanguageOption | null) => {
+  const onLanguageChange = (selectedOption: SelectOption | null) => {
     i18n.changeLanguage(selectedOption?.value);
   };
 
@@ -39,9 +39,10 @@ export const Header = (props: HeaderComponentsProps) => {
       <HeaderContainer>
         <Logo onClick={onLogoButtonClick} src={TAG_N_TRAC_LOGO} />
         <LogoutButtonAndLanguageSelectorWrapper>
-          <LanguageSelector
-            onLanguageChange={onLanguageChange}
+          <CommonSelector
+            onOptionChange={onLanguageChange}
             selectOptions={languageSelectorOptions}
+            defaultValue={languageSelectorOptions[0]}
           />
           <LogoutButton onClick={onLogoutButtonClick}>
             {t("buttonTexts.logout")}
