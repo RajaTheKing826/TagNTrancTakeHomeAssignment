@@ -8,7 +8,12 @@
     "size": "పరిమాణం : ",
     "expectedDeliveryDate": "ఊహించిన డెలివరీ తేదీ : ",
     "sourceLocation": "ప్రారంభ స్థానం : ",
-    "destinationLocation": "గమ్యస్థానం : "
+    "destinationLocation": "గమ్యస్థానం : ",
+    "customerShipmentDetails": "కస్టమర్ షిప్‌మెంట్ వివరాలు",
+    "deliveryPartnerShipmentDetails": "డెలివరీ భాగస్వామి షిప్‌మెంట్ వివరాలు",
+    "deliveryStatus": "డెలివరీ స్థితిని : ",
+    "sortByDeliveryDate": "డెలివరీ తేదీ ద్వారా క్రమబద్ధీకరించండి",
+    "filterByDeliveryStatus": "డెలివరీ స్థితి ద్వారా ఫిల్టర్ చేయండి"
   },
   "buttonTexts": {
     "logout": "లాగ్అవుట్"

@@ -8,7 +8,12 @@
     "size": "आकार : ",
     "expectedDeliveryDate": "अपेक्षित वितरण की तारीख : ",
     "sourceLocation": "अपेक्षित वितरण की तारीख : ",
-    "destinationLocation": "गंतव्य स्थान : "
+    "destinationLocation": "गंतव्य स्थान : ",
+    "customerShipmentDetails": "ग्राहक शिपमेंट विवरण",
+    "deliveryPartnerShipmentDetails": "डिलीवरी पार्टनर शिपमेंट विवरण",
+    "deliveryStatus": "वितरण की स्थिति : ",
+    "sortByDeliveryDate": "डिलीवरी की तारीख के अनुसार छाँटें",
+    "filterByDeliveryStatus": "वितरण स्थिति के अनुसार फ़िल्टर करें"
   },
   "buttonTexts": {
     "logout": "लॉग आउट"

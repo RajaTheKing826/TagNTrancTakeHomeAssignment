@@ -10,6 +10,8 @@ import {
   RightSideTextsContainer,
   SourceLocationText,
   ValueText,
+  DeliveryDateText,
+  DeliveryStatusText,
 } from "./styledComponents";
 
 interface DeliveryPartnerShipmentItemCardTypes {
@@ -18,13 +20,22 @@ interface DeliveryPartnerShipmentItemCardTypes {
   sourceLocation: string;
   destinationLocation: string;
   imageSource: string;
+  deliveryDate: string;
+  deliveryStatus: string;
 }
 
 export const DeliveryPartnerShipmentItemCard = (
   props: DeliveryPartnerShipmentItemCardTypes
 ) => {
-  const { title, size, sourceLocation, destinationLocation, imageSource } =
-    props;
+  const {
+    title,
+    size,
+    sourceLocation,
+    destinationLocation,
+    imageSource,
+    deliveryDate,
+    deliveryStatus,
+  } = props;
   const { t } = useTranslation();
   return (
     <DeliveryParnterShipmentCardContainer>
@@ -42,6 +53,14 @@ export const DeliveryPartnerShipmentItemCard = (
           {t("subHeadings.destinationLocation")}{" "}
           <ValueText>{destinationLocation}</ValueText>
         </DestinationLocation>
+        <DeliveryDateText>
+          {t("subHeadings.expectedDeliveryDate")}{" "}
+          <ValueText>{deliveryDate}</ValueText>
+        </DeliveryDateText>
+        <DeliveryStatusText>
+          {t("subHeadings.deliveryStatus")}{" "}
+          <ValueText>{deliveryStatus}</ValueText>
+        </DeliveryStatusText>
       </RightSideTextsContainer>
     </DeliveryParnterShipmentCardContainer>
   );

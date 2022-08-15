@@ -11,6 +11,7 @@
     "destinationLocation": "Destination Location : ",
     "customerShipmentDetails": "Customer Shipment Details",
     "deliveryPartnerShipmentDetails": "Delivery Partner Shipment Details",
+    "deliveryStatus": "Delivery Status : ",
     "sortByDeliveryDate": "Sort By Delivery Date",
     "filterByDeliveryStatus": "Filter By Delivery Status"
   },

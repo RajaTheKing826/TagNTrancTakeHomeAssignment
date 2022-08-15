@@ -24,6 +24,8 @@ export const DeliveryPartnerShipmentItemsListComponent = (
           destinationLocation={shipment.destination}
           title={shipment.title}
           imageSource={shipment.image}
+          deliveryDate={shipment.expectedDeliveryDate}
+          deliveryStatus={shipment.deliveryStatus}
         />
       ))}
     </ListViewContainer>
