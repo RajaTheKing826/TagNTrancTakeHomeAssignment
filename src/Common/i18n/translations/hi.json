@@ -13,7 +13,8 @@
     "deliveryPartnerShipmentDetails": "डिलीवरी पार्टनर शिपमेंट विवरण",
     "deliveryStatus": "वितरण की स्थिति : ",
     "sortByDeliveryDate": "डिलीवरी की तारीख के अनुसार छाँटें",
-    "filterByDeliveryStatus": "वितरण स्थिति के अनुसार फ़िल्टर करें"
+    "filterByDeliveryStatus": "वितरण स्थिति के अनुसार फ़िल्टर करें",
+    "updateDeliveryStatus": "डिलीवरी की स्थिति अपडेट करें"
   },
   "buttonTexts": {
     "logout": "लॉग आउट"

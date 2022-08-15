@@ -31,3 +31,8 @@ export interface GetDeliveryPartnerShipmentsRequestObject {
   filter?: string;
   sort?: string;
 }
+
+export interface UpdateShipmentDeliveryStatus {
+  id: string;
+  status: string;
+}

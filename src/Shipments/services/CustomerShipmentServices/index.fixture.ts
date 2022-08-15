@@ -9,6 +9,7 @@ import deliveryPartnerShipmentFixturesResponse from "../../fixtures/delivery-par
 import {
   GetCustomerShipmentsRequestObject,
   GetDeliveryPartnerShipmentsRequestObject,
+  UpdateShipmentDeliveryStatus,
 } from "../types";
 import { ShipmentService } from ".";
 
@@ -31,5 +32,11 @@ export class ShipmentFixtureService implements ShipmentService {
       deliveryPartnerShipmentFixturesResponse
     );
     return resolveWithTimeout(filteredResponse);
+  };
+
+  updateItemDeliveryPickupStatus = (
+    requestObject: UpdateShipmentDeliveryStatus
+  ) => {
+    return resolveWithTimeout({});
   };
 }

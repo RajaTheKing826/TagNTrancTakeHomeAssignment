@@ -13,7 +13,8 @@
     "deliveryPartnerShipmentDetails": "డెలివరీ భాగస్వామి షిప్‌మెంట్ వివరాలు",
     "deliveryStatus": "డెలివరీ స్థితిని : ",
     "sortByDeliveryDate": "డెలివరీ తేదీ ద్వారా క్రమబద్ధీకరించండి",
-    "filterByDeliveryStatus": "డెలివరీ స్థితి ద్వారా ఫిల్టర్ చేయండి"
+    "filterByDeliveryStatus": "డెలివరీ స్థితి ద్వారా ఫిల్టర్ చేయండి",
+    "updateDeliveryStatus": "డెలివరీ స్థితిని నవీకరించండి"
   },
   "buttonTexts": {
     "logout": "లాగ్అవుట్"

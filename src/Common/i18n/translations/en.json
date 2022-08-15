@@ -13,7 +13,8 @@
     "deliveryPartnerShipmentDetails": "Delivery Partner Shipment Details",
     "deliveryStatus": "Delivery Status : ",
     "sortByDeliveryDate": "Sort By Delivery Date",
-    "filterByDeliveryStatus": "Filter By Delivery Status"
+    "filterByDeliveryStatus": "Filter By Delivery Status",
+    "updateDeliveryStatus": "Update Delivery Status"
   },
   "buttonTexts": {
     "logout": "Logout"

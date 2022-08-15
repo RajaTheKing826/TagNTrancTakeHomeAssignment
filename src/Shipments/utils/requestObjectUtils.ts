@@ -73,9 +73,8 @@ export const getFilteredAndSortedDeliveryPartnerShipments = (
   const { filter, sort } = requestObject;
   let filteredItems = shipments;
 
-  console.log(filter, sort, "filter,sort");
   if (sort && sort !== "") {
-    if (sort === "HOGH_TO_LOW") {
+    if (sort === "LOW_TO_HIGH") {
       filteredItems.sort(descendingSortFunction);
     } else {
       filteredItems.sort(ascendingSortFunction);

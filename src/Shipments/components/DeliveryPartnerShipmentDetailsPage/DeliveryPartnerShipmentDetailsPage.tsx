@@ -29,6 +29,7 @@ import { SelectOption } from "../../../Common/components/CommonSelectorComponent
 
 interface DeliveryPartnerShipmentPageProps {
   deliveryPartnerShipmentsMachineState: DeliveryPartnerShipmentsMachineState;
+  deliveryPartnerShipmentsMachineSend: any;
   setSelectedFilter: (value: SelectOption | null) => void;
   setSelectedSort: (value: SelectOption | null) => void;
   defaultFilterValue: SelectOption;
@@ -44,6 +45,7 @@ export const DeliveryPartnerShipmentDetailsPage = (
     setSelectedFilter,
     defaultFilterValue,
     defaultSortValue,
+    deliveryPartnerShipmentsMachineSend,
   } = props;
   const { t } = useTranslation();
 
@@ -109,6 +111,9 @@ export const DeliveryPartnerShipmentDetailsPage = (
         <DeliveryPartnerShipmentItemsListComponent
           deliveryPartnerShipmentsMachineState={
             deliveryPartnerShipmentsMachineState
+          }
+          deliveryPartnerShipmentsMachineSend={
+            deliveryPartnerShipmentsMachineSend
           }
         />
       </PageContainer>

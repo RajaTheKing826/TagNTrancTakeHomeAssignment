@@ -18,7 +18,6 @@ export const DeliveryPartnerShipmentDetailsRoute = () => {
   ]: any = useMachine(deliveryPartnerShipmentsMachine);
 
   useEffect(() => {
-    console.log("called");
     deliveryPartnerShipmentsMachineSend({
       type: ON_GET_SHIPMENT_DETAILS_EVENT,
       data: {
@@ -33,6 +32,7 @@ export const DeliveryPartnerShipmentDetailsRoute = () => {
       deliveryPartnerShipmentsMachineState={
         deliveryPartnerShipmentsMachineState
       }
+      deliveryPartnerShipmentsMachineSend={deliveryPartnerShipmentsMachineSend}
       setSelectedFilter={setSelectedFilter}
       setSelectedSort={setSelectedSort}
       defaultFilterValue={selectedFilter}

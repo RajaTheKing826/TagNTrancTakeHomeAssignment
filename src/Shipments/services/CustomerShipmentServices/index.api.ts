@@ -4,6 +4,7 @@ import {
   CustomerShipmentAPIRepsonse,
   GetCustomerShipmentsRequestObject,
   GetDeliveryPartnerShipmentsRequestObject,
+  UpdateShipmentDeliveryStatus,
 } from "../types";
 import { endpoints } from "../endpoints";
 
@@ -19,11 +20,10 @@ class CustomerShipmentAPIServices implements ShipmentService {
     requestObject: GetCustomerShipmentsRequestObject
   ) => {
     return fetch(this.apiUrl, {
-      method: "POST",
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(requestObject),
     }).then((data) => data);
   };
 
@@ -31,12 +31,23 @@ class CustomerShipmentAPIServices implements ShipmentService {
     requestObject: GetDeliveryPartnerShipmentsRequestObject
   ) => {
     return fetch(this.apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((data) => data);
+  };
+
+  updateItemDeliveryPickupStatus = (
+    requestObject: UpdateShipmentDeliveryStatus
+  ) => {
+    return fetch(this.apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(requestObject),
-    }).then((data) => data);
+    });
   };
 }
 

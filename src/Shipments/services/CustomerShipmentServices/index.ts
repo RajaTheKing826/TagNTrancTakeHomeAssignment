@@ -2,6 +2,7 @@ import React from "react";
 import {
   GetCustomerShipmentsRequestObject,
   GetDeliveryPartnerShipmentsRequestObject,
+  UpdateShipmentDeliveryStatus,
 } from "../types";
 
 export interface ShipmentService {
@@ -11,5 +12,9 @@ export interface ShipmentService {
 
   getDeliveryPartnerShipmentDetails: (
     requestObject: GetDeliveryPartnerShipmentsRequestObject
+  ) => Promise<any>;
+
+  updateItemDeliveryPickupStatus: (
+    requestObject: UpdateShipmentDeliveryStatus
   ) => Promise<any>;
 }

@@ -13,16 +13,19 @@ const {
   getShipmentDetailsState,
   getShipmentDetailsFailureState,
   getShipmentDetailsSuccessState,
+  updateStatusState,
+  updateStatusSuccessState,
 } = deliveryPartnerShipmentMachineStates;
 
-const { onGetShipmentDetailsEvent, onRetryEvent, onSortOrFilterShipments } =
+const { onGetShipmentDetailsEvent, onRetryEvent, onUpdateStatus } =
   deliveryPartnerShipmentMachineEvents;
 
-const { pageLoading } = deliveryPartnerShipmentMachineTags;
+const { pageLoading, updateStatusLoading } = deliveryPartnerShipmentMachineTags;
 
 export interface DeliveryPartnerShipmentMachineContext {
   shipments: Array<DeliveryPartnerShipmentDataModel>;
   errorMessage: string;
+  statusUpdatingShipmentId: string;
 }
 
 export type DeliveryPartnerShipmentsMachineEvents =
@@ -40,6 +43,7 @@ export const deliveryParnterShipmentsMachine = () => {
     context: {
       errorMessage: "",
       shipments: [],
+      statusUpdatingShipmentId: "",
     },
     states: {
       [initialState]: {
@@ -64,6 +68,33 @@ export const deliveryParnterShipmentsMachine = () => {
       [getShipmentDetailsSuccessState]: {
         on: {
           [onGetShipmentDetailsEvent]: getShipmentDetailsState,
+          [onUpdateStatus]: {
+            target: updateStatusState,
+            actions: ["addUpdateShipmentItemId"],
+          },
+        },
+      },
+      [updateStatusState]: {
+        tags: [updateStatusLoading],
+        invoke: {
+          src: "updateDeliveryStatus",
+          onDone: {
+            target: updateStatusSuccessState,
+            actions: ["showSuccessToast"],
+          },
+          onError: {
+            target: getShipmentDetailsSuccessState,
+            actions: ["showFailureToast"],
+          },
+        },
+      },
+      [updateStatusSuccessState]: {
+        on: {
+          [onGetShipmentDetailsEvent]: getShipmentDetailsState,
+          [onUpdateStatus]: {
+            target: updateStatusState,
+            actions: ["addUpdateShipmentItemId"],
+          },
         },
       },
       [getShipmentDetailsFailureState]: {
