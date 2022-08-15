@@ -21,7 +21,7 @@ class CustomerShipmentAPIServices implements CustomerShipmentService {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(requestObject),
-    }).then((data) => data) as Promise<CustomerShipmentAPIRepsonse>;
+    }).then((data) => data); 
   };
 }
 

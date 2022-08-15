@@ -1,2 +1,2 @@
-import { CustomerShipmentItemCard } from './CustomerShipmentItemCard'
-export default CustomerShipmentItemCard
+import { CustomerShipmentItemCard } from "./CustomerShipmentItemCard";
+export default CustomerShipmentItemCard;

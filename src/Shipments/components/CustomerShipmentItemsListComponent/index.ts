@@ -1,2 +1,2 @@
-import { CustomerShipmentItemsListComponent } from './CustomerShipmentItemsListComponent'
-export default CustomerShipmentItemsListComponent
+import { CustomerShipmentItemsListComponent } from "./CustomerShipmentItemsListComponent";
+export default CustomerShipmentItemsListComponent;

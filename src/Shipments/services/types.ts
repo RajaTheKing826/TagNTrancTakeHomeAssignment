@@ -4,6 +4,7 @@ export interface CustomerShipmentItem {
   expected_delivery_date: string;
   source_location: string;
   destination: string;
+  title: string;
   id: string;
 }
 

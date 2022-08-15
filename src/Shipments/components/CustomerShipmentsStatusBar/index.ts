@@ -1,2 +1,2 @@
-import { CustomerShipmentsStatusBar } from './CustomerShipmentsStatusBar'
-export default CustomerShipmentsStatusBar
+import { CustomerShipmentsStatusBar } from "./CustomerShipmentsStatusBar";
+export default CustomerShipmentsStatusBar;

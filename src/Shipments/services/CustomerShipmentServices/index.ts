@@ -5,7 +5,5 @@ import {
 } from "../types";
 
 export interface CustomerShipmentService {
-  getItems: (
-    requestObject: GetCustomerShipmentsRequestObject
-  ) => Promise<CustomerShipmentAPIRepsonse>;
+  getItems: (requestObject: GetCustomerShipmentsRequestObject) => Promise<any>;
 }

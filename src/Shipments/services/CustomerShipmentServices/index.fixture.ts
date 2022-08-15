@@ -5,7 +5,7 @@ import customerShipmentFixtureResponse from "../../fixtures/customer-shipment-fi
 import { GetCustomerShipmentsRequestObject } from "../types";
 import { CustomerShipmentService } from ".";
 
-class CustomerShipmentFixtureService implements CustomerShipmentService {
+export class CustomerShipmentFixtureService implements CustomerShipmentService {
   getItems = (requestObject: GetCustomerShipmentsRequestObject) => {
     const filteredResponse = getFilteredShipmentsResponse(
       requestObject,
