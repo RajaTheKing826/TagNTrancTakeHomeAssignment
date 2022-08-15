@@ -17,9 +17,13 @@ export const ItemTitleText = styled.span`
 `;
 
 export const SourceLocationText = styled.span`
-  ${tw`font-bold text-gray-600 text-sm mb-1`}
+  ${tw`text-gray-600 text-sm mb-1`}
 `;
 
 export const DestinationLocation = styled(SourceLocationText)``;
 
 export const ItemSizeText = styled(SourceLocationText)``;
+
+export const ValueText = styled.span`
+  ${tw`text-sm text-base font-normal text-gray-600`}
+`;

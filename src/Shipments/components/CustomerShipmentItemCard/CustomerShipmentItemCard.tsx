@@ -9,6 +9,7 @@ import {
   ItemTitleText,
   RightSideTextsContainer,
   SourceLocationText,
+  ValueText,
 } from "./styledComponents";
 
 interface CustomerShipmentItemCardTypes {
@@ -31,13 +32,15 @@ export const CustomerShipmentItemCard = (
       <RightSideTextsContainer>
         <ItemTitleText>{title}</ItemTitleText>
         <ItemSizeText>
-          {t("subHeadings.size")} {size}
+          {t("subHeadings.size")} <ValueText>{size}</ValueText>
         </ItemSizeText>
         <SourceLocationText>
-          {t("subHeadings.sourceLocation")} {sourceLocation}
+          {t("subHeadings.sourceLocation")}{" "}
+          <ValueText>{sourceLocation}</ValueText>
         </SourceLocationText>
         <DestinationLocation>
-          {t("subHeadings.destinationLocation")} {destinationLocation}
+          {t("subHeadings.destinationLocation")}{" "}
+          <ValueText>{destinationLocation}</ValueText>
         </DestinationLocation>
       </RightSideTextsContainer>
     </CustomerShipmentCardContainer>

@@ -1,8 +1,18 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import i18n from "../../i18n";
 import { TAG_N_TRAC_LOGO } from "../../constants/ImageUrlConstants";
-import { HeaderContainer, Logo, LogoutButton } from "./styledComponents";
+import { languageSelectorOptions } from "../../constants/LanguageConstants";
+import LanguageSelector from "../LanguageSelector";
+import { LanguageOption } from "../LanguageSelector/LanguageSelector";
+
+import {
+  HeaderContainer,
+  Logo,
+  LogoutButton,
+  LogoutButtonAndLanguageSelectorWrapper,
+} from "./styledComponents";
 
 interface HeaderComponentsProps {
   children: React.ReactNode;
@@ -20,13 +30,23 @@ export const Header = (props: HeaderComponentsProps) => {
 
   const onLogoutButtonClick = () => {};
 
+  const onLanguageChange = (selectedOption: LanguageOption | null) => {
+    i18n.changeLanguage(selectedOption?.value);
+  };
+
   return (
     <>
       <HeaderContainer>
         <Logo onClick={onLogoButtonClick} src={TAG_N_TRAC_LOGO} />
-        <LogoutButton onClick={onLogoutButtonClick}>
-          {t("buttonTexts.logout")}
-        </LogoutButton>
+        <LogoutButtonAndLanguageSelectorWrapper>
+          <LanguageSelector
+            onLanguageChange={onLanguageChange}
+            selectOptions={languageSelectorOptions}
+          />
+          <LogoutButton onClick={onLogoutButtonClick}>
+            {t("buttonTexts.logout")}
+          </LogoutButton>
+        </LogoutButtonAndLanguageSelectorWrapper>
       </HeaderContainer>
       {children}
     </>

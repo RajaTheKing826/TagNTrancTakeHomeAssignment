@@ -5,10 +5,10 @@
     "itemsCount": "వస్తువుల గణనలు : "
   },
   "subHeadings": {
-    "size": "పరిమాణం",
-    "expectedDeliveryDate": "ఊహించిన డెలివరీ తేదీ",
-    "sourceLocation": "ప్రారంభ స్థానం",
-    "destinationLocation": "గమ్యస్థానం"
+    "size": "పరిమాణం : ",
+    "expectedDeliveryDate": "ఊహించిన డెలివరీ తేదీ : ",
+    "sourceLocation": "ప్రారంభ స్థానం : ",
+    "destinationLocation": "గమ్యస్థానం : "
   },
   "buttonTexts": {
     "logout": "లాగ్అవుట్"

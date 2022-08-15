@@ -17,4 +17,10 @@ export const CommonStyledButton = styled.button`
   box-shadow: none;
 `;
 
-export const LogoutButton = styled(CommonStyledButton)``;
+export const LogoutButton = styled(CommonStyledButton)`
+  ${tw`ml-6`}
+`;
+
+export const LogoutButtonAndLanguageSelectorWrapper = styled.div`
+  ${tw`flex items-center justify-center`}
+`;

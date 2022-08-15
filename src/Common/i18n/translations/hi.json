@@ -5,10 +5,10 @@
     "itemsCount": "आइटम गिनती : "
   },
   "subHeadings": {
-    "size": "आकार",
-    "expectedDeliveryDate": "अपेक्षित वितरण की तारीख",
-    "sourceLocation": "अपेक्षित वितरण की तारीख",
-    "destinationLocation": "गंतव्य स्थान"
+    "size": "आकार : ",
+    "expectedDeliveryDate": "अपेक्षित वितरण की तारीख : ",
+    "sourceLocation": "अपेक्षित वितरण की तारीख : ",
+    "destinationLocation": "गंतव्य स्थान : "
   },
   "buttonTexts": {
     "logout": "लॉग आउट"

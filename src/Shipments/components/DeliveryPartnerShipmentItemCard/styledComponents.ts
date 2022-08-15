@@ -23,3 +23,7 @@ export const SourceLocationText = styled.span`
 export const DestinationLocation = styled(SourceLocationText)``;
 
 export const ItemSizeText = styled(SourceLocationText)``;
+
+export const ValueText = styled.span`
+  ${tw`text-sm text-base font-normal text-gray-600`}
+`;
