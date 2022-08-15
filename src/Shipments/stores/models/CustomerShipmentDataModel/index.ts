@@ -1,6 +1,6 @@
 import React from "react";
 import { CustomerShipmentItem } from "../../../services/types";
-class CustomerShipmentDataModel {
+class DeliveryPartnerShipmentDataModel {
   image: string;
   size: string;
   expectedDeliveryDate: string;
@@ -19,4 +19,4 @@ class CustomerShipmentDataModel {
   }
 }
 
-export default CustomerShipmentDataModel;
+export default DeliveryPartnerShipmentDataModel;

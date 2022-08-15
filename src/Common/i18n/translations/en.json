@@ -8,7 +8,9 @@
     "size": "Size : ",
     "expectedDeliveryDate": "Expected Delivery Date : ",
     "sourceLocation": "Starting Location : ",
-    "destinationLocation": "Destination Location : "
+    "destinationLocation": "Destination Location : ",
+    "customerShipmentDetails": "Customer Shipment Details",
+    "deliveryPartnerShipmentDetails": "Customer Shipment Details"
   },
   "buttonTexts": {
     "logout": "Logout"

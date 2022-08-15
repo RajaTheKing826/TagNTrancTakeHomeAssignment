@@ -3,25 +3,40 @@ import Config from "../../../Common/constants/EnvironmentConstants";
 import {
   CustomerShipmentAPIRepsonse,
   GetCustomerShipmentsRequestObject,
+  GetDeliveryPartnerShipmentsRequestObject,
 } from "../types";
 import { endpoints } from "../endpoints";
 
-import { CustomerShipmentService } from "./index";
+import { ShipmentService } from "./index";
 
-class CustomerShipmentAPIServices implements CustomerShipmentService {
+class CustomerShipmentAPIServices implements ShipmentService {
   apiUrl: string;
   constructor() {
     const { getCustomerShipments } = endpoints;
     this.apiUrl = Config.SHIPMENTS_API + getCustomerShipments;
   }
-  getItems = (requestObject: GetCustomerShipmentsRequestObject) => {
+  getCustomerShipmentDetails = (
+    requestObject: GetCustomerShipmentsRequestObject
+  ) => {
     return fetch(this.apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(requestObject),
-    }).then((data) => data); 
+    }).then((data) => data);
+  };
+
+  getDeliveryPartnerShipmentDetails = (
+    requestObject: GetDeliveryPartnerShipmentsRequestObject
+  ) => {
+    return fetch(this.apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestObject),
+    }).then((data) => data);
   };
 }
 

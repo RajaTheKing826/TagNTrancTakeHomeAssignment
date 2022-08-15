@@ -1,2 +1,2 @@
-import { DeliverShipmentsRoute } from "./DeliverShipmentsRoute";
-export default DeliverShipmentsRoute;
+import { DeliveryPartnerShipmentDetailsRoute } from "./DeliverShipmentsRoute";
+export default DeliveryPartnerShipmentDetailsRoute;

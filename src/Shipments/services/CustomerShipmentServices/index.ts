@@ -1,9 +1,15 @@
 import React from "react";
 import {
-  CustomerShipmentAPIRepsonse,
   GetCustomerShipmentsRequestObject,
+  GetDeliveryPartnerShipmentsRequestObject,
 } from "../types";
 
-export interface CustomerShipmentService {
-  getItems: (requestObject: GetCustomerShipmentsRequestObject) => Promise<any>;
+export interface ShipmentService {
+  getCustomerShipmentDetails: (
+    requestObject: GetCustomerShipmentsRequestObject
+  ) => Promise<any>;
+
+  getDeliveryPartnerShipmentDetails: (
+    requestObject: GetDeliveryPartnerShipmentsRequestObject
+  ) => Promise<any>;
 }

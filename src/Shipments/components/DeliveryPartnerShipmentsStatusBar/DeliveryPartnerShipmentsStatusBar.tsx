@@ -11,12 +11,12 @@ import {
   ItemsCountText,
 } from "./styledComponents";
 
-interface CustomerShipmentsStatusBarProps {
+interface DeliveryPartnerShipmentsStatusBarProps {
   itemsCount: number;
 }
 
-export const CustomerShipmentsStatusBar = (
-  props: CustomerShipmentsStatusBarProps
+export const DeliveryPartnerShipmentsStatusBar = (
+  props: DeliveryPartnerShipmentsStatusBarProps
 ) => {
   const { itemsCount } = props;
   const { t } = useTranslation();
@@ -29,7 +29,7 @@ export const CustomerShipmentsStatusBar = (
       />
       <HeadingAndSubHeadingWrapper>
         <UpdateItemsAddressHeadingText>
-          {t("subHeadings.customerShipmentDetails")}
+          {t("subHeadings.deliveryPartnerShipmentDetails")}
         </UpdateItemsAddressHeadingText>
         <ItemsCountText>
           {t("headings.itemsCount")}

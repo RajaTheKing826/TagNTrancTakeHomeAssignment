@@ -1,18 +1,18 @@
 import { UseMutateAsyncFunction, useMutation } from "react-query";
 import { GetCustomerShipmentsRequestObject } from "../services/types";
-import useCustomerShipmentService from "./services/useCustomerShipmentService";
+import useShipmentService from "./services/useShipmentService";
 
 const useGetCustomerShipmentDetails = (): {
   getCustomerDetailsApi: UseMutateAsyncFunction<any, unknown, {}, unknown>;
   error: unknown;
   status: string;
 } => {
-  const { customerShipmentService } = useCustomerShipmentService();
+  const { shipmentService: customerShipmentService } = useShipmentService();
 
   const getCustomerShipmentDetails = (
     params: GetCustomerShipmentsRequestObject
   ) => {
-    return customerShipmentService.getItems(params);
+    return customerShipmentService.getCustomerShipmentDetails(params);
   };
 
   const { mutateAsync, error, status } = useMutation(

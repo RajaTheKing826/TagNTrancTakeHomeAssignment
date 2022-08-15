@@ -8,6 +8,8 @@ export interface CustomerShipmentItem {
   id: string;
 }
 
+export interface DeliveryPartnerShipmentItem extends CustomerShipmentItem {}
+
 export interface CustomerShipmentAPIRepsonse {
   shipments: Array<CustomerShipmentItem>;
 }
@@ -18,3 +20,6 @@ export interface GetCustomerShipmentsRequestObject {
   sourceLocation?: string;
   destination?: string;
 }
+
+export interface GetDeliveryPartnerShipmentsRequestObject
+  extends GetCustomerShipmentsRequestObject {}
