@@ -6,10 +6,12 @@ import { QueryClient, QueryClientProvider, useQuery } from "react-query";
 import {
   CUSTOMER_SHIPMENTS,
   DELIVERY_PARTNER_SHIPMENTS,
+  LOGIN_ROUTE_PATH,
 } from "../constants/RouteConstants";
 import i18n from "../i18n";
 import CustomerShipmentsRoute from "../../Shipments/routes/CustomerShipmentsRoute";
 import DeliveryShipmentsRoute from "../../Shipments/routes/DeliveryShipmentsRoute";
+import LoginRoute from "./LoginRoute";
 
 const CommonRoutes = () => {
   const queryClient = new QueryClient();
@@ -27,6 +29,8 @@ const CommonRoutes = () => {
               path={DELIVERY_PARTNER_SHIPMENTS}
               component={DeliveryShipmentsRoute}
             />
+            <Route path={LOGIN_ROUTE_PATH} component={LoginRoute} />
+            <Route path={"*"} component={LoginRoute} />
           </Switch>
         </BrowserRouter>
       </I18nextProvider>
