@@ -13,7 +13,8 @@ export const InstaImageContainer = styled.div`
 `;
 
 export const RenderInstaImage = styled.img`
-  width: 300px;
+  width: 582px;
+  height: 373px;
 `;
 
 export const LoginFormContainer = styled.form`
@@ -82,12 +83,10 @@ export const ErrorMsg = styled.p`
 `;
 
 export const LoginButton = styled.button`
-  ${tw`bg-blue-400 rounded-lg text-white border-none flex items-center justify-center cursor-pointer outline-none mt-3`}
+  ${tw`bg-blue-400 rounded-lg text-white border-none cursor-pointer outline-none mt-3`}
   width:360px;
   height: 40px;
   @media (max-width: 768px) {
     widgth: 312px;
   }
 `;
-
-export const LoaderContainer = styled.div``;

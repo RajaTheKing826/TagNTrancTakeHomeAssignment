@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Oval } from "react-loader-spinner";
 import { isRegularExpressionLiteral } from "typescript";
 
 import { TAG_N_TRAC_LOGO } from "../../constants/ImageUrlConstants";
-import { ON_LOGIN_EVENT } from "../../machines/LoginMachine/constants";
-import { LoginMachineState } from "../../machines/LoginMachine/LoginMachine";
 import InputFieldWithLabel from "../InputFieldWithLabel";
 
 import {
@@ -18,15 +15,9 @@ import {
   LoginButton,
   ButtonErrorMsgContainer,
   ErrorMsg,
-  LoaderContainer,
 } from "./styledComponents";
 
-interface LoginFormProps {
-  onSubmitButtonClick: (values: unknown) => void;
-  apiLoading: boolean;
-}
-
-const LoginForm = (props: LoginFormProps) => {
+const SignUpForm = () => {
   const { t } = useTranslation();
 
   const [userName, setUserName] = useState("");
@@ -34,13 +25,10 @@ const LoginForm = (props: LoginFormProps) => {
 
   const [isUsernameFocused, setIsUsernameFocused] = useState(true);
   const [isPasswordFocused, setIsPasswordFocused] = useState(true);
-  const { onSubmitButtonClick, apiLoading } = props;
 
-  const passwordRegex = new RegExp(
+  const regex = new RegExp(
     /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
   );
-
-  const isValidPassword = passwordRegex.test(password);
   const onUsernameFocusEvent = () => {
     setIsUsernameFocused(true);
   };
@@ -61,10 +49,6 @@ const LoginForm = (props: LoginFormProps) => {
     e.preventDefault();
     setIsUsernameFocused(false);
     setIsPasswordFocused(false);
-
-    if (userName !== "" && isValidPassword) {
-      onSubmitButtonClick({ userName, password });
-    }
   };
 
   const onChangeUsername = (event: React.FormEvent<HTMLInputElement>) => {
@@ -73,19 +57,6 @@ const LoginForm = (props: LoginFormProps) => {
 
   const onChangePassword = (event: React.FormEvent<HTMLInputElement>) => {
     setPassword(event.currentTarget.value);
-  };
-
-  const renderLoader = () => {
-    return (
-      <LoaderContainer>
-        <Oval
-          height="20"
-          width="20"
-          color="white"
-          ariaLabel="three-dots-loading"
-        />
-      </LoaderContainer>
-    );
   };
 
   const userNameFieldValues = {
@@ -101,6 +72,8 @@ const LoginForm = (props: LoginFormProps) => {
     onFocusEvent: onUsernameFocusEvent,
   };
 
+  console.log(regex.test(password), "regex.test(password)");
+
   const passwordFieldValues = {
     type: "password",
     labelText: "PASSWORD*",
@@ -108,7 +81,7 @@ const LoginForm = (props: LoginFormProps) => {
     value: password,
     onchangeMethod: onChangePassword,
     placeholder: "Enter Password",
-    isErrorDisplayed: !isPasswordFocused && !passwordRegex.test(password),
+    isErrorDisplayed: !isPasswordFocused && !regex.test(password),
     errMsg: "Password should container string, number, and special characters",
     onblurFunc: onBlurPassword,
     onFocusEvent: onPasswordFocusEvent,
@@ -127,13 +100,11 @@ const LoginForm = (props: LoginFormProps) => {
         <InputFieldWithLabel {...userNameFieldValues} />
         <InputFieldWithLabel {...passwordFieldValues} />
         <ButtonErrorMsgContainer>
-          <LoginButton onClick={onLoginButtonClick}>
-            {apiLoading ? renderLoader() : "Login"}
-          </LoginButton>
+          <LoginButton onClick={onLoginButtonClick}>Login</LoginButton>
         </ButtonErrorMsgContainer>
       </LoginFormContainer>
     </LoginPageContainer>
   );
 };
 
-export { LoginForm };
+export { SignUpForm };

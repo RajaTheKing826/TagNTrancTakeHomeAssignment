@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
 import { TAG_N_TRAC_LOGO } from "../../constants/ImageUrlConstants";
 import { languageSelectorOptions } from "../../constants/LanguageConstants";
+import Cookies from "js-cookie";
 import CommonSelector from "../CommonSelectorComponent";
 import { SelectOption } from "../CommonSelectorComponent/CommonSelectorComponent";
 
@@ -13,6 +14,7 @@ import {
   LogoutButton,
   LogoutButtonAndLanguageSelectorWrapper,
 } from "./styledComponents";
+import { LOGIN_COOKIE } from "../../constants/CookiConstants";
 
 interface HeaderComponentsProps {
   children: React.ReactNode;
@@ -24,11 +26,10 @@ export const Header = (props: HeaderComponentsProps) => {
 
   const { t } = useTranslation();
 
-  const onLogoButtonClick = () => {
-    window.location.href = "https://www.tagntrac.com/";
+  const onLogoutButtonClick = () => {
+    Cookies.remove(LOGIN_COOKIE);
+    window.location.href = "http://localhost:3000/login";
   };
-
-  const onLogoutButtonClick = () => {};
 
   const onLanguageChange = (selectedOption: SelectOption | null) => {
     i18n.changeLanguage(selectedOption?.value);
@@ -37,7 +38,7 @@ export const Header = (props: HeaderComponentsProps) => {
   return (
     <>
       <HeaderContainer>
-        <Logo onClick={onLogoButtonClick} src={TAG_N_TRAC_LOGO} />
+        <Logo onClick={onLogoutButtonClick} src={TAG_N_TRAC_LOGO} />
         <LogoutButtonAndLanguageSelectorWrapper>
           <CommonSelector
             onOptionChange={onLanguageChange}

@@ -10,6 +10,7 @@
     "i18next": "^21.9.0",
     "i18next-browser-languagedetector": "^6.1.5",
     "i18next-http-backend": "^1.4.1",
+    "js-cookie": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^11.18.3",
@@ -47,7 +48,7 @@
     "@types/styled-components": "^5.1.26",
     "tailwindcss": "^3.1.8"
   },
-  "overrides":{
+  "overrides": {
     "react-error-overlay": "6.0.9"
   }
 }

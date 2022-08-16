@@ -30,7 +30,7 @@ const CommonRoutes = () => {
               component={DeliveryShipmentsRoute}
             />
             <Route path={LOGIN_ROUTE_PATH} component={LoginRoute} />
-            <Route path={"*"} component={LoginRoute} />
+            <Route path={"*"} key={"home-route"} component={LoginRoute} />
           </Switch>
         </BrowserRouter>
       </I18nextProvider>
