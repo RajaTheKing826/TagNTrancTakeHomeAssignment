@@ -2,7 +2,11 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const LoginPageContainer = styled.div`
-  ${tw`flex justify-center items-center h-screen`}
+  ${tw`flex justify-center items-center h-screen `};
+`;
+
+export const LoginHeadingText = styled.p`
+  ${tw`text-2xl text-green-500 self-center m-0 mb-2`}
 `;
 
 export const InstaImageContainer = styled.div`
@@ -18,7 +22,7 @@ export const RenderInstaImage = styled.img`
 
 export const LoginFormContainer = styled.form`
   width: 456px;
-  ${tw`p-12 flex flex-col justify-center box-border`}
+  ${tw`p-12 flex flex-col justify-center box-border border border-solid border-gray-200 rounded-lg`}
 
   @media (max-width: 768px) {
     ${tw`shadow-none items-center p-7 m-auto`}
@@ -75,6 +79,10 @@ export const ButtonErrorMsgContainer = styled.div`
     ${tw`m-auto`};
     width: 312px;
   }
+`;
+
+export const RedirectingText = styled.a`
+  ${tw`text-sm text-blue-600 mt-2 block`}
 `;
 
 export const ErrorMsg = styled.p`

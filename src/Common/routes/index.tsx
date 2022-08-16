@@ -7,11 +7,13 @@ import {
   CUSTOMER_SHIPMENTS,
   DELIVERY_PARTNER_SHIPMENTS,
   LOGIN_ROUTE_PATH,
+  SIGNUP_ROUTE_PATH,
 } from "../constants/RouteConstants";
 import i18n from "../i18n";
 import CustomerShipmentsRoute from "../../Shipments/routes/CustomerShipmentsRoute";
 import DeliveryShipmentsRoute from "../../Shipments/routes/DeliveryShipmentsRoute";
 import LoginRoute from "./LoginRoute";
+import SignupRoute from "./SignUpRoute";
 
 const CommonRoutes = () => {
   const queryClient = new QueryClient();
@@ -30,6 +32,7 @@ const CommonRoutes = () => {
               component={DeliveryShipmentsRoute}
             />
             <Route path={LOGIN_ROUTE_PATH} component={LoginRoute} />
+            <Route path={SIGNUP_ROUTE_PATH} component={SignupRoute} />
             <Route path={"*"} key={"home-route"} component={LoginRoute} />
           </Switch>
         </BrowserRouter>

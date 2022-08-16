@@ -4,8 +4,8 @@ import { Oval } from "react-loader-spinner";
 import { isRegularExpressionLiteral } from "typescript";
 
 import { TAG_N_TRAC_LOGO } from "../../constants/ImageUrlConstants";
-import { ON_LOGIN_EVENT } from "../../machines/LoginMachine/constants";
-import { LoginMachineState } from "../../machines/LoginMachine/LoginMachine";
+import { PASSWORD_REGEX } from "../../constants/RegexConstants";
+
 import InputFieldWithLabel from "../InputFieldWithLabel";
 
 import {
@@ -19,6 +19,8 @@ import {
   ButtonErrorMsgContainer,
   ErrorMsg,
   LoaderContainer,
+  LoginHeadingText,
+  RedirectingText,
 } from "./styledComponents";
 
 interface LoginFormProps {
@@ -36,11 +38,7 @@ const LoginForm = (props: LoginFormProps) => {
   const [isPasswordFocused, setIsPasswordFocused] = useState(true);
   const { onSubmitButtonClick, apiLoading } = props;
 
-  const passwordRegex = new RegExp(
-    /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/
-  );
-
-  const isValidPassword = passwordRegex.test(password);
+  const isValidPassword = PASSWORD_REGEX.test(password);
   const onUsernameFocusEvent = () => {
     setIsUsernameFocused(true);
   };
@@ -108,7 +106,7 @@ const LoginForm = (props: LoginFormProps) => {
     value: password,
     onchangeMethod: onChangePassword,
     placeholder: "Enter Password",
-    isErrorDisplayed: !isPasswordFocused && !passwordRegex.test(password),
+    isErrorDisplayed: !isPasswordFocused && !PASSWORD_REGEX.test(password),
     errMsg: "Password should container string, number, and special characters",
     onblurFunc: onBlurPassword,
     onFocusEvent: onPasswordFocusEvent,
@@ -119,8 +117,8 @@ const LoginForm = (props: LoginFormProps) => {
       <InstaImageContainer>
         <RenderInstaImage src={TAG_N_TRAC_LOGO} />
       </InstaImageContainer>
-
       <LoginFormContainer>
+        <LoginHeadingText>Login</LoginHeadingText>
         <InstaLogoContainer>
           <RenderInstaLogo src={TAG_N_TRAC_LOGO} />
         </InstaLogoContainer>
@@ -131,6 +129,9 @@ const LoginForm = (props: LoginFormProps) => {
             {apiLoading ? renderLoader() : "Login"}
           </LoginButton>
         </ButtonErrorMsgContainer>
+        <RedirectingText href="/signup">
+          Don't Have Account? Redirect to Signup
+        </RedirectingText>
       </LoginFormContainer>
     </LoginPageContainer>
   );

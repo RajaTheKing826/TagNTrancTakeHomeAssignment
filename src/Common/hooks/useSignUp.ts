@@ -3,21 +3,20 @@ import { SignupRequestObject } from "../services/types";
 import useAuthenticationService from "./services/useAuthService";
 
 const useLoginApi = (): {
-  loginApi: any;
+  signupApi: any;
   error: unknown;
   status: string;
 } => {
   const { authenticationService } = useAuthenticationService();
 
-  const updateDeliverStatus = (params: SignupRequestObject) => {
-    console.log(params, "params");
+  const signUpApiFunction = (params: SignupRequestObject) => {
     return authenticationService.signup(params);
   };
 
-  const { mutateAsync, error, status } = useMutation(updateDeliverStatus);
+  const { mutateAsync, error, status } = useMutation(signUpApiFunction);
 
   return {
-    loginApi: mutateAsync,
+    signupApi: mutateAsync,
     error,
     status,
   };

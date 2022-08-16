@@ -5,6 +5,10 @@ export const LoginPageContainer = styled.div`
   ${tw`flex justify-center items-center h-screen`}
 `;
 
+export const SignUpHeadingText = styled.p`
+  ${tw`text-2xl text-green-500 self-center m-0 mb-2`}
+`;
+
 export const InstaImageContainer = styled.div`
   margin-right: 82px;
   @media (max-width: 768px) {
@@ -13,13 +17,12 @@ export const InstaImageContainer = styled.div`
 `;
 
 export const RenderInstaImage = styled.img`
-  width: 582px;
-  height: 373px;
+  width: 300px;
 `;
 
 export const LoginFormContainer = styled.form`
   width: 456px;
-  ${tw`p-12 flex flex-col justify-center box-border`}
+  ${tw`p-12 flex flex-col justify-center box-border border border-solid border-gray-200 rounded-lg`}
 
   @media (max-width: 768px) {
     ${tw`shadow-none items-center p-7 m-auto`}
@@ -83,10 +86,12 @@ export const ErrorMsg = styled.p`
 `;
 
 export const LoginButton = styled.button`
-  ${tw`bg-blue-400 rounded-lg text-white border-none cursor-pointer outline-none mt-3`}
+  ${tw`bg-blue-400 rounded-lg text-white border-none flex items-center justify-center cursor-pointer outline-none mt-3`}
   width:360px;
   height: 40px;
   @media (max-width: 768px) {
     widgth: 312px;
   }
 `;
+
+export const LoaderContainer = styled.div``;

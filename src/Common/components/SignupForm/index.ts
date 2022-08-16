@@ -1,2 +1,2 @@
-import { SignUpForm } from "./SignUpForm";
-export default SignUpForm;
+import { SignupForm } from "./SignUpForm";
+export default SignupForm;
